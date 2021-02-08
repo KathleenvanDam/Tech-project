@@ -1,0 +1,25 @@
+{
+  "name": "project-tech",
+  "version": "1.0.0",
+  "description": "project for block tech",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KathleenvanDam/Tech-project.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KathleenvanDam/Tech-project/issues"
+  },
+  "homepage": "https://github.com/KathleenvanDam/Tech-project#readme",
+  "dependencies": {
+    "camelcase": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
