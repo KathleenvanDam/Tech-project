@@ -10,7 +10,10 @@ app.get('/students', (req, res) => {
 });
 app.get('/students/:studentId', (req, res) => {
     res.send(`<h1>Detailpage of student ${req.params.studentId} </h1>`)
-})
+});
+app.use(function (req, res, next) {
+    res.status(404).send("Sorry can't find that page!")
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`)
