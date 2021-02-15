@@ -1,8 +1,16 @@
 body{
     font-family: sans-serif;
-    color:#f1f1f1;
+    background-color:#E3E6FF;
 }
 
 h1{
-    color:aqua;
+    color:#A77BB2;
+}
+
+h2{
+    color:red;
+}
+
+p{
+    color:black;
 }
