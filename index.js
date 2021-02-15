@@ -1,14 +1,17 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const path = require('path');
 
 app.use(express.static('public'));
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.render('pages/home');
 });
 app.get('/students', (req, res) => {
-    res.send('List of movies!')
+    res.render('pages/students');
 });
 app.get('/students/:studentId', (req, res) => {
     res.send(`<h1>Detailpage of student ${req.params.studentId} </h1>`)
