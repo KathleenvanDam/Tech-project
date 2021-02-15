@@ -1,16 +1,53 @@
 body{
+    margin:0;
+    padding:0;
     font-family: sans-serif;
-    background-color:#E3E6FF;
+    background-color:#2F323D;
 }
 
-h1{
-    color:#A77BB2;
+.visually-hidden{
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.student{
+    position: relative;
+    background-color: #505568;
+    margin: 0 1em 1em 1em;
+    border-radius: 10px;
+}
+
+img{
+    position:absolute;
+    top:0;
+    margin:1em;
+    width:40%;
+}
+
+.student p, h1{
+    padding:.5em 1em .5em 0;
+    text-align: right;
+    color:white;
+}
+
+.short-info{
+    background-color: #79819F;
+    display: flex;
+    justify-content:space-evenly;
+    margin-top:4em;
+    border-radius: 10px;
 }
 
 h2{
-    color:red;
+    color:#ffffff;
+    margin: 1.5em 0 2em 1em;
 }
 
 p{
-    color:black;
+    color:#ffffff;
 }
