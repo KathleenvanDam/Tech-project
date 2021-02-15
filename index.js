@@ -13,8 +13,9 @@ app.get('/', (req, res) => {
 app.get('/students', (req, res) => {
     res.render('pages/students');
 });
-app.get('/students/:studentId', (req, res) => {
-    res.send(`<h1>Detailpage of student ${req.params.studentId} </h1>`)
+app.get('/students/:name', (req, res) => {
+    var data = {age: 23, study: 'CMD'};
+    res.render('pages/students', {person: req.params.name, data: data});
 });
 app.use(function (req, res, next) {
     res.status(404).send("Sorry can't find that page!")
