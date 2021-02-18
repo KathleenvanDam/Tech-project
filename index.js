@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   res.render('pages/home', {title:'Studentlist'});
 });
 app.get('/students', (req, res) => {
-    res.render('pages/students');
+    res.render('pages/students', {title:'test'});
 });
 app.get('/students/:name', (req, res) => {
     var data = {age: 23, study: 'CMD'};
