@@ -8,7 +8,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('pages/home');
+  res.render('pages/home', {title:'Studentlist'});
 });
 app.get('/students', (req, res) => {
     res.render('pages/students');
