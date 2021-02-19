@@ -11,12 +11,10 @@ app.get('/', (req, res) => {
   res.render('pages/home', {title:'Studentlist'});
 });
 app.get('/students', (req, res) => {
-    console.log('route1');
     res.render('pages/students', {title:'test'});
 });
 app.get('/students/:name', (req, res) => {
     var data = {age: 23, study: 'CMD'};
-    console.log('route2');
     res.render('pages/students', {person: req.params.name, data: data, title:'test'});
 });
 app.use(function (req, res, next) {
