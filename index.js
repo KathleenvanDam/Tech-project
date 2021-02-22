@@ -13,10 +13,6 @@ app.get('/', (req, res) => {
 app.get('/students', (req, res) => {
     res.render('pages/students', {title:'test'});
 });
-app.get('/students/:name', (req, res) => {
-    var data = {age: 23, study: 'CMD'};
-    res.render('pages/students', {person: req.params.name, data: data, title:'test'});
-});
 app.use(function (req, res, next) {
     res.status(404).send("Sorry can't find that page!")
 });
