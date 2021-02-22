@@ -15,6 +15,12 @@ body{
   width: 1px;
 }
 
+.filter{
+    text-decoration: none;
+    color:#FFCC6E;
+    margin-left:1em;
+}
+
 .student{
     position: relative;
     background-color: #505568;
@@ -29,10 +35,11 @@ img{
     width:40%;
 }
 
-.student p, h1{
+.student h1, h1 + p{
     padding:.5em 1em .5em 0;
     text-align: right;
     color:white;
+    margin:0;
 }
 
 .short-info{
@@ -45,7 +52,7 @@ img{
 
 h2{
     color:#ffffff;
-    margin: 1.5em 0 2em 1em;
+    margin:1.5em 0 1.3em .6em;
 }
 
 p{
