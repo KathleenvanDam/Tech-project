@@ -3,7 +3,6 @@ const app = express();
 const port = 3000;
 const path = require('path');
 const bodyParser = require('body-parser')
-const slug = require('slug')
 
 const students = [
   {"id": "student 1", "name": "Thomas", "studie": "CMD", "age": "18"},
@@ -23,14 +22,13 @@ app.get('/', (req, res) => {
 app.get('/filter', (req, res) => {
   res.render('filter', {title: 'Filter'});
 });
-app.post('/', (req, res) => {
-  const id = slug(req.body.name);
-  const student = {"id": "id", "name": req.body.name, "studie": req.body.studie, "age": req.body.age};
-  students.push(student);
-  res.render('home', {title: "added new students", student});
-});
+
 app.use(function (req, res, next) {
     res.status(404).send("Sorry can't find that page!")
+});
+
+app.post('/',function (req,res) {
+    var name = req.body.test;
 });
 
 app.listen(port, () => {
