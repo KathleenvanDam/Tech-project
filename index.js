@@ -8,10 +8,10 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('pages/home', {title:'Studentlist'});
+  res.render('home', {title:'Studentlist'});
 });
-app.get('/students', (req, res) => {
-    res.render('pages/students', {title:'test'});
+app.get('/filter', (req, res) => {
+  res.render('filter', {title: 'Filter'});
 });
 app.use(function (req, res, next) {
     res.status(404).send("Sorry can't find that page!")
