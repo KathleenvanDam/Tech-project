@@ -18,13 +18,16 @@ body{
 .filter{
     text-decoration: none;
     color:#FFCC6E;
-    margin-left:1em;
+    margin:1em;
+    border: 1px solid #FFCC6E;
+    border-radius: 5px;
+    padding:.2em;
 }
 
 .student{
     position: relative;
     background-color: #505568;
-    margin: 0 1em 1em 1em;
+    margin: 1em 1em 1em 1em;
     border-radius: 10px;
 }
 
@@ -35,18 +38,25 @@ img{
     width:40%;
 }
 
-.student h1, h1 + p{
-    padding:.5em 1em .5em 0;
-    text-align: right;
+.student h1 + p{
+    text-align: left;
     color:white;
-    margin:0;
+    margin-left:170px;
+    padding: 0 .3em 0 0;
+}
+
+.student h1{
+    text-align: left;
+    color:white;
+    margin-left:170px;
+    padding:1em .5em .3em 0;
 }
 
 .short-info{
     background-color: #79819F;
     display: flex;
     justify-content:space-evenly;
-    margin-top:4em;
+    margin-top:3.2em;
     border-radius: 10px;
 }
 
@@ -57,4 +67,27 @@ h2{
 
 p{
     color:#ffffff;
+}
+
+form{
+    padding:1em;
+    max-width:200px;
+}
+
+label{
+    display: block;
+    color:white;
+}
+input, textarea{
+    display: block;
+}
+
+#sendBtn{
+    border:none;
+    border-radius: 7px;
+    background-color: #FFCC6E;
+    color:black;
+    padding: .5rem;
+    margin: 1rem 0;
+    cursor:pointer;
 }
