@@ -10,6 +10,8 @@ const students = [
   {"name": "Marijke", "studie": "Geschiedenis", "age": "20"}
 ];
 
+const year = ["year 1", "year 2", "year 3", "year 4"];
+
 const adults = students.filter(person => person.age >= 18);
 const study = students.filter(person => person.studie === 'Economie');
 
@@ -32,9 +34,7 @@ app.use(function (req, res, next) {
     res.status(404).send("Sorry can't find that page!")
 });
 
-app.post('/',function (req,res) {
-    var name = req.body.test;
-});
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`)
