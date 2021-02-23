@@ -5,10 +5,15 @@ const path = require('path');
 const bodyParser = require('body-parser')
 
 const students = [
-  {"id": "student 1", "name": "Thomas", "studie": "CMD", "age": "18"},
-  {"id": "student 2", "name": "Nina", "studie": "CMD", "age": "17"},
-  {"id": "student 3", "name": "Marijke", "studie": "CMD", "age": "20"}
+  {"name": "Thomas", "studie": "CMD", "age": "18"},
+  {"name": "Nina", "studie": "Economie", "age": "17"},
+  {"name": "Marijke", "studie": "Geschiedenis", "age": "20"}
 ];
+
+const adults = students.filter(person => person.age >= 18);
+const study = students.filter(person => person.studie === 'Economie');
+
+console.log(study);
 
 app.use(express.static('public'));
 
