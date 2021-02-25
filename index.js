@@ -1,13 +1,15 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const path = require('path');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 
 const students = [
-  {"name": "Thomas", "studie": "CMD", "age": "18"},
-  {"name": "Nina", "studie": "Economie", "age": "17"},
-  {"name": "Marijke", "studie": "Geschiedenis", "age": "20"}
+  {"name": "Thomas", "studie": "CMD", "age": 18},
+  {"name": "Nina", "studie": "Economie", "age": 17},
+  {"name": "Marijke", "studie": "Geschiedenis", "age": 20},
+  {"name": "Thomas", "studie": "Communucitie", "age": 21},
+  {"name": "Nina", "studie": "Economie", "age": 17},
+  {"name": "Marijke", "studie": "Geschiedenis", "age": 23}
 ];
 
 const year = ["year 1", "year 2", "year 3", "year 4"];
@@ -20,19 +22,27 @@ console.log(study);
 app.use(express.static('public'));
 
 app.use(bodyParser.json());
-app.use(express.urlencoded(true));
+app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('home', {title:'Studentlist'});
-});
-app.get('/filter', (req, res) => {
-  res.render('filter', {title: 'Filter'});
-});
+  res.render('home', {title:'Studentlist', results: 4})
+})
+
+app.post('/', (req, res) => {
+  const filteredGroups = students.filter(function (students) {
+  return students.age >= Number(req.body.age)
+  })
+
+  res.render('home', { 
+    title: 'ActiveTogether',
+    results: filteredGroups.length
+    })
+    })
 
 app.use(function (req, res, next) {
     res.status(404).send("Sorry can't find that page!")
-});
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`)

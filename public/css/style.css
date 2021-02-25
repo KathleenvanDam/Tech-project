@@ -15,7 +15,7 @@ body{
   width: 1px;
 }
 
-.filter{
+.filterBtn{
     text-decoration: none;
     color:#FFCC6E;
     margin:1em;
@@ -69,6 +69,22 @@ p{
     color:#ffffff;
 }
 
+.filterForm{
+    position: absolute;
+    background-color: white; 
+    bottom:0; 
+    top: 0;
+    width: 100%; 
+    color: black;
+    transform: translateY(-100%);
+    transition: 1s;
+}
+
+.filterForm-show{
+    position:fixed;
+    transform:translateY(0%);
+}
+
 form{
     padding:1em;
     max-width:200px;
@@ -91,3 +107,4 @@ input, textarea{
     margin: 1rem 0;
     cursor:pointer;
 }
+
