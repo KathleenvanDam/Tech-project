@@ -2,6 +2,33 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
+require('dotenv').config()
+const mongoose = require('mongoose');
+
+/* --- MongoDB String --- */
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://Admin:<password>@block-tech.wfctv.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+/* --- dotenv --- */
+const db = require('db')
+db.connect({
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS
+})
+
+/* --- mongoose --- */
+await mongoose.connect('mongodb://localhost/test', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true
+});
 
 const students = [
   {"name": "Thomas", "studie": "CMD", "age": 18},
