@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 
 /* --- MongoDB String --- */
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://Admin:<password>@block-tech.wfctv.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://Admin:DamKath!0510@block-tech.wfctv.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
