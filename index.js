@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
 require('dotenv').config()
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 
 /* --- MongoDB String --- */
 const MongoClient = require('mongodb').MongoClient;
@@ -22,13 +22,14 @@ db.connect({
   password: process.env.DB_PASS
 })
 
-/* --- mongoose --- */
+/* --- mongoose --- 
 await mongoose.connect('mongodb://localhost/test', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
   useCreateIndex: true
 });
+*/
 
 const students = [
   {"name": "Thomas", "studie": "CMD", "age": 18},
