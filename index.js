@@ -7,13 +7,14 @@ require('dotenv').config()
 
 /* --- MongoDB String --- */
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://Admin:DamKath!0510@block-tech.wfctv.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://Admin:TSSiE2gaz98tm8oG@cluster0.wfctv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
   client.close();
 });
+
 
 /* --- dotenv --- */
 const db = require('db')

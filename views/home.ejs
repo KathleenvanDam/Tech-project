@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include ('layout/head'); -%>
 </head>
+
 <body>
     <h1 class="visually-hidden">Welcome to Study Buddy</h1>
     <h2>Discover</h2>
@@ -31,7 +33,7 @@
     </section>
 
     <section class="filterForm">
-    <h2>Filter</h2>
+        <h2>Filter</h2>
         <form method="POST" action="/">
             <label for="studie">Studie</label>
             <select id="studie" name="studie">
@@ -46,7 +48,8 @@
                 <option>iets</option>
             </select>
             <label for="age">Leeftijd</label>
-            <input id="age" type="range" name="age" value="0" min="16" max="30" oninput="this.nextElementSibling.value = this.value">
+            <input id="age" type="range" name="age" value="0" min="16" max="30"
+                oninput="this.nextElementSibling.value = this.value">
             <output>0</output>
             <label for="year">Jaarlaag</label>
             <select id="year" name="year">
@@ -57,10 +60,11 @@
             </select>
             <label for="online">Online</label>
             <input id="online" name="online" type="radio">
-            <input id="offline" name="offline" type="radio"> 
+            <input id="offline" name="offline" type="radio">
             <input type="submit" id="sendBtn">
         </form>
     </section>
     <script src="/script.js"></script>
 </body>
+
 </html>
