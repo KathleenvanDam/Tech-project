@@ -1,39 +1,15 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
-const bodyParser = require('body-parser');
-require('dotenv').config()
-//const mongoose = require('mongoose');
-
-/* --- MongoDB String ---
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://Admin:kath@cluster0.wfctv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
-*/
+const bodyParser = require("body-parser");
+require("dotenv").config()
 
 /* --- dotenv --- */
-const db = require('db')
+const db = require("db")
 db.connect({
   username: process.env.DB_USER,
   password: process.env.DB_PASS
 })
-
-/* --- mongoose --- 
-await mongoose.connect('mongodb://localhost/test', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true
-});
-*/
 
 const students = [{
     "name": "Thomas",
@@ -70,37 +46,37 @@ const students = [{
 const year = ["year 1", "year 2", "year 3", "year 4"];
 
 const adults = students.filter(person => person.age >= 18);
-const study = students.filter(person => person.studie === 'Economie');
+const study = students.filter(person => person.studie === "Economie");
 
 console.log(study);
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 
-app.get('/', (req, res) => {
-  res.render('home', {
-    title: 'Studentlist',
+app.get("/", (req, res) => {
+  res.render("home", {
+    title: "Studentlist",
     results: 4
   })
 })
 
-app.post('/', (req, res) => {
+app.post("/", (req, res) => {
   const filteredGroups = students.filter(function (students) {
     return students.age >= Number(req.body.age)
   })
 
-  res.render('home', {
-    title: 'ActiveTogether',
+  res.render("home", {
+    title: "ActiveTogether",
     results: filteredGroups.length
   })
 })
 
-app.use(function (req, res, next) {
+app.use(function (req, res) {
   res.status(404).send("Sorry can't find that page!")
 })
 
