@@ -5,16 +5,19 @@ const bodyParser = require('body-parser');
 require('dotenv').config()
 //const mongoose = require('mongoose');
 
-/* --- MongoDB String --- */
+/* --- MongoDB String ---
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://Admin:kath@cluster0.wfctv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 client.connect(err => {
   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
   client.close();
 });
-
+*/
 
 /* --- dotenv --- */
 const db = require('db')
