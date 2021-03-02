@@ -1,7 +1,7 @@
 const { MongoClient } = require("mongodb");
  
 // Replace the following with your Atlas connection string                                                                                                                                        
-const url = "mongodb+srv://Admin:kath@cluster0.sd3qo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority&useUnifiedTopology=true";
+const url = "mongodb+srv://Admin:kath@cluster0.mongodb.net/test?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true";
 const client = new MongoClient(url);
 
 async function run() {
