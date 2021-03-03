@@ -2,6 +2,7 @@
   "name": "project-tech",
   "version": "1.0.0",
   "description": "project for block tech",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
     "lint": "eslint .",
