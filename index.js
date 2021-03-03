@@ -27,34 +27,6 @@ try {
   console.log(error)
 }
 
-
-/*async function main(){
-  	    const uri = process.env.DB_URI;
-  	    const client = new MongoClient(uri);
-  	    try {
-  	        await client.connect();
-  	        await  listDatabases(client);
-  	    } catch (e) {
-  	        console.error(e);
-  	    } finally {
-  	        await client.close();
-  	    }
-  	}	
-  	main().catch(console.error);
-*/
-
-//https://medium.com/@sergio13prez/connecting-to-mongodb-atlas-d1381f184369
-/*const uri = process.env.DB_URI;
-mongoose.connect(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => {
-  console.log('MongoDB Connected…')
-})
-.catch(err => console.log(err))
-*/
-
 app.use(express.static("public"));
 
 app.use(bodyParser.json());
@@ -63,11 +35,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-  res.render("home", {
-    title: "Studentlist",
-    results: 4
-  })
+app.get("/", async (req, res) => {
+  let students = {}
+  students = await db.collection('students').find({}).toArray();
+  res.render("home", {title: "Studentlist", results: 4, students})
 })
 
 app.post("/", (req, res) => {
