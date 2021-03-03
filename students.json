@@ -1,0 +1,31 @@
+[{
+    "name": "Thomas",
+    "studie": "CMD",
+    "age": 18
+  },
+  {
+    "name": "Nina",
+    "studie": "Economie",
+    "age": 17
+  },
+  {
+    "name": "Marijke",
+    "studie": "Geschiedenis",
+    "age": 20
+  },
+  {
+    "name": "Thomas",
+    "studie": "Communucitie",
+    "age": 21
+  },
+  {
+    "name": "Nina",
+    "studie": "Economie",
+    "age": 17
+  },
+  {
+    "name": "Marijke",
+    "studie": "Geschiedenis",
+    "age": 23
+  }
+];
