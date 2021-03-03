@@ -3,9 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv").config();
 const { MongoClient } = require('mongodb');
+const mongoose = require('mongoose');
 const port = 3000;
-
-console.log(process.env.TESTVAR)
 
 const year = ["year 1", "year 2", "year 3", "year 4"];
 
@@ -27,6 +26,34 @@ try {
 } catch (error) {
   console.log(error)
 }
+
+
+/*async function main(){
+  	    const uri = process.env.DB_URI;
+  	    const client = new MongoClient(uri);
+  	    try {
+  	        await client.connect();
+  	        await  listDatabases(client);
+  	    } catch (e) {
+  	        console.error(e);
+  	    } finally {
+  	        await client.close();
+  	    }
+  	}	
+  	main().catch(console.error);
+*/
+
+//https://medium.com/@sergio13prez/connecting-to-mongodb-atlas-d1381f184369
+/*const uri = process.env.DB_URI;
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => {
+  console.log('MongoDB Connected…')
+})
+.catch(err => console.log(err))
+*/
 
 app.use(express.static("public"));
 
