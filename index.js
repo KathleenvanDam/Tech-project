@@ -44,7 +44,7 @@ app.get("/", async (req, res) => {
 })
 
 app.post("/", async (req, res) => {
-  var students = {}
+  const students = {}
   students = await db.collection('students').find({}).toArray();
   const filteredStudents = students.filter(function (students) {
     return students.age >= Number(req.body.age)

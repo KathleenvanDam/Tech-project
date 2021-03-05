@@ -20,8 +20,9 @@ body{
     color:#FFCC6E;
     margin:1em;
     border: 1px solid #FFCC6E;
+    background-color: #000000;
     border-radius: 5px;
-    padding:.2em;
+    padding:.5em;
 }
 
 .student{
@@ -58,6 +59,10 @@ img{
     justify-content:space-evenly;
     margin-top:3.2em;
     border-radius: 10px;
+}
+
+.results{
+    margin:1em;
 }
 
 h2{
