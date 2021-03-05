@@ -37,7 +37,7 @@ app.set("view engine", "ejs");
 
 app.get("/", async (req, res) => {
   let students = {}
-  students = await db.collection('students').find({}).toArray();
+  students = await db.collection('students').find({ }).toArray();
   res.render('home', {title: "Studentlist", results: 4, students})
 })
 
