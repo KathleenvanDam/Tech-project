@@ -38,17 +38,17 @@ app.set("view engine", "ejs");
 app.get("/", async (req, res) => {
   let students = {}
   students = await db.collection('students').find({}).toArray();
-  res.render("home", {title: "Studentlist", results: 4, students})
+  res.render('home', {title: "Studentlist", results: 4, students})
 })
 
 app.post("/", (req, res) => {
-  const filteredGroups = students.filter(function (students) {
+  const filteredStudents = students.filter(function (students) {
     return students.age >= Number(req.body.age)
   })
 
   res.render("home", {
     title: "ActiveTogether",
-    results: filteredGroups.length
+    results: filteredStudents.length
   })
 })
 
