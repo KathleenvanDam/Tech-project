@@ -3,7 +3,6 @@ const app = express();
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv").config();
 const { MongoClient } = require('mongodb');
-const mongoose = require('mongoose');
 const port = 3000;
 
 const year = ["year 1", "year 2", "year 3", "year 4"];
@@ -38,17 +37,23 @@ app.set("view engine", "ejs");
 app.get("/", async (req, res) => {
   let students = {}
   students = await db.collection('students').find({ }).toArray();
-  res.render('home', {title: "Studentlist", results: 4, students})
+  res.render('home', 
+  {title: "Studentlist", 
+  results: 4, 
+  students})
 })
 
-app.post("/", (req, res) => {
-  const filteredStudents = student.filter(function (students) {
+app.post("/", async (req, res) => {
+  var students = {}
+  students = await db.collection('students').find({}).toArray();
+  const filteredStudents = students.filter(function (students) {
     return students.age >= Number(req.body.age)
   })
 
-  res.render("home", {
+  res.render('home', {
     title: "ActiveTogether",
-    results: filteredStudents.length
+    results: filteredStudents.length,
+    students
   })
 })
 
