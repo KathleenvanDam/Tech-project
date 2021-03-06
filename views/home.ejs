@@ -12,9 +12,13 @@
     <button class="filterBtn">Filter</button>
 
     <% students.forEach(function(students) { %>
+        <section class="student">
             <p><%= students.name %></p>
-            <p><%= students.age %></p>
             <p><%= students.studie %></p>
+            <div class="short-info">
+                <p><%= students.age %></p>
+            </div>
+        </section>   
     <% }); %>
     
     <!-- <section class="student"> 
