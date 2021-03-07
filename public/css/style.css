@@ -80,9 +80,11 @@ p{
     color:#ffffff;
 }
 
+/*-- Filter -- */
+
 .filterForm{
     position: absolute;
-    background-color: white; 
+    background-color:#2F323D ; 
     bottom:0; 
     top: 0;
     width: 100%; 
@@ -97,16 +99,37 @@ p{
 }
 
 form{
+    margin:2em;
     padding:1em;
     max-width:200px;
 }
 
+select{
+    padding:.5em;
+    color:#ffffff;
+    border: 2px solid #FFCC6E;
+    background-color: #2F323D;
+}
+
 label{
     display: block;
-    color:white;
+    color:#ffffff;
+    padding: 1rem 0 0.25rem;
+    font-size: 1.5em;
 }
 input, textarea{
     display: block;
+}
+
+#age{
+    display:inline-block;
+}
+
+output{
+    color:#ffffff;
+    display:inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 #sendBtn{
@@ -115,7 +138,7 @@ input, textarea{
     background-color: #FFCC6E;
     color:black;
     padding: .5rem;
-    margin: 1rem 0;
+    margin: 3rem 0;
     cursor:pointer;
 }
 

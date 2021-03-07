@@ -11,7 +11,7 @@
     <p class="results"> <%= results %> Resultaten</p>
     <button class="filterBtn">Filter</button>
     <!-- Bron: https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click -->
-    <button class="resetBtn" onclick= "window.location.href=window.location.href">Reset</button>
+    <!-- <button class="resetBtn" onclick= "window.location.href=window.location.href">Reset</button> --> 
 
     <ul>
         <% students.forEach(function(students) { %>
@@ -28,36 +28,17 @@
     </ul>
     <% }); %>
 
-    <!-- <section class="student"> 
-        <h1>Naomi van Dijk</h1>
-        <p>Commerciële Economie</p>
-        <img src="images/girl.svg">
-        <div class="short-info">
-            <p>23</p>
-            <p>Jaar 3</p>
-            <p>Online</p>
-        </div>
-    </section>
-
-    <section class="student">
-        <h1>Thomas Jansen</h1>
-        <p>Communicatie</p>
-        <img src="images/girl.svg">
-        <div class="short-info">
-            <p>19</p>
-            <p>Jaar 1</p>
-            <p>Online</p>
-        </div>
-    </section> -->
-
     <section class="filterForm">
         <h2>Filter</h2>
         <form method="POST" action="/">
             <label for="studie">Studie</label>
             <select id="studie" name="studie">
                 <option>CMD</option>
-                <option>Commerciele economie</option>
+                <option>Docent</option>
+                <option>Verpleegkunde</option>
+                <option>Bouwkunde</option>
                 <option>Communicatie</option>
+                <option>Business Studies</option>
             </select>
             <!--<label for="skills">Skills</label>
             <select id="skills" name="skills">
