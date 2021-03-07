@@ -39,8 +39,8 @@ app.get("/", async (req, res) => {
   students = await db.collection('students').find({ }).toArray();
   res.render('home', 
   {title: "Studentlist", 
-  results: 4, 
-  students})
+  results: students.length, 
+  students:students})
 })
 
 app.post("/", async (req, res) => {
@@ -48,12 +48,14 @@ app.post("/", async (req, res) => {
   students = await db.collection('students').find({}).toArray();
   const filteredStudents = students.filter(function (students) {
     return students.age >= Number(req.body.age)
+    && students.studie == String(req.body.studie)
+    && students.year >= Number(req.body.year)
   })
 
   res.render('home', {
-    title: "ActiveTogether",
+    title: "Studenten",
     results: filteredStudents.length,
-    students
+    students:filteredStudents
   })
 })
 

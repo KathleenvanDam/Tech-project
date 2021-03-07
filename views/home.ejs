@@ -11,8 +11,9 @@
     <p class="results"> <%= results %> Resultaten</p>
     <button class="filterBtn">Filter</button>
 
-    <% students.forEach(function(students) { %>
-        <section class="student">
+    <ul>
+        <% students.forEach(function(students) { %>
+        <li class="student">
             <h1><%= students.name %></h1>
             <p><%= students.studie %></p>
             <img src="<%= students.image %>">
@@ -21,9 +22,10 @@
                 <p><%= students.year %></p>
                 <p><%= students.preference %></p>
             </div>
-        </section>   
+        </li>
+    </ul>
     <% }); %>
-    
+
     <!-- <section class="student"> 
         <h1>Naomi van Dijk</h1>
         <p>Commerciële Economie</p>
@@ -55,26 +57,23 @@
                 <option>Commerciele economie</option>
                 <option>Communicatie</option>
             </select>
-            <label for="skills">Skills</label>
+            <!--<label for="skills">Skills</label>
             <select id="skills" name="skills">
                 <option>Front-end</option>
                 <option>Photoshop</option>
                 <option>iets</option>
-            </select>
+            </select> -->
             <label for="age">Leeftijd</label>
             <input id="age" type="range" name="age" value="0" min="16" max="30"
                 oninput="this.nextElementSibling.value = this.value">
             <output>0</output>
             <label for="year">Jaarlaag</label>
             <select id="year" name="year">
-                <option>Jaar 1</option>
-                <option>Jaar 2</option>
-                <option>Jaar 3</option>
-                <option>Jaar 4</option>
+                <option value=1>Jaar 1</option>
+                <option value=2>Jaar 2</option>
+                <option value=3>Jaar 3</option>
+                <option value=4>Jaar 4</option>
             </select>
-            <label for="online">Online</label>
-            <input id="online" name="online" type="radio">
-            <input id="offline" name="offline" type="radio">
             <input type="submit" id="sendBtn">
         </form>
     </section>
