@@ -15,7 +15,7 @@ body{
   width: 1px;
 }
 
-.filterBtn{
+.filterBtn, .resetBtn{
     text-decoration: none;
     color:#FFCC6E;
     margin:1em;
@@ -25,11 +25,17 @@ body{
     padding:.5em;
 }
 
+ul {
+    margin:0;
+    padding:0;
+}
+
 .student{
     position: relative;
     background-color: #505568;
     margin: 1em 1em 1em 1em;
     border-radius: 10px;
+    list-style-type: none;
 }
 
 img{
