@@ -68,3 +68,9 @@ app.listen(port, () => {
 });
 
 //FIXME: ESLint dingen laten fixen
+
+  res.render('home', {
+    title: "Studenten",
+    results: filteredStudents.length,
+    students:filteredStudents
+  })
