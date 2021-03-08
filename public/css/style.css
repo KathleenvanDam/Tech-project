@@ -15,14 +15,26 @@ body{
   width: 1px;
 }
 
+h2{
+    color:#ffffff;
+    margin:1.5em 0 .2em .6em;
+}
+
 .filterBtn, .resetBtn{
     text-decoration: none;
     color:#FFCC6E;
-    margin:1em;
+    margin-left:1.2em;
     border: 1px solid #FFCC6E;
-    background-color: #000000;
+    background-color: #2F323D;
     border-radius: 5px;
-    padding:.5em;
+    padding:.5em 2em;
+    margin-left:10.5em;
+}
+
+.results{
+    margin:1em;
+    font-weight: bold;
+    display:inline-block;
 }
 
 ul {
@@ -33,7 +45,7 @@ ul {
 .student{
     position: relative;
     background-color: #505568;
-    margin: 1em 1em 1em 1em;
+    margin: 1em;
     border-radius: 10px;
     list-style-type: none;
 }
@@ -45,10 +57,15 @@ img{
     width:40%;
 }
 
+p{
+    color:#ffffff;
+}
+
 .student h1 + p{
     text-align: left;
     color:white;
     margin-left:170px;
+    margin-top:0;
     padding: 0 .3em 0 0;
 }
 
@@ -57,6 +74,7 @@ img{
     color:white;
     margin-left:170px;
     padding:1em .5em .3em 0;
+    margin-bottom:0;
 }
 
 .short-info{
@@ -65,19 +83,6 @@ img{
     justify-content:space-evenly;
     margin-top:4.5em;
     border-radius: 10px;
-}
-
-.results{
-    margin:1em;
-}
-
-h2{
-    color:#ffffff;
-    margin:1.5em 0 1.3em .6em;
-}
-
-p{
-    color:#ffffff;
 }
 
 /*-- Filter -- */
@@ -99,23 +104,23 @@ p{
 }
 
 form{
-    margin:2em;
     padding:1em;
     max-width:200px;
 }
 
 select{
-    padding:.5em;
+    padding:.7em;
     color:#ffffff;
     border: 2px solid #FFCC6E;
-    background-color: #2F323D;
+    border-radius: 5px;
+    background-color: #505568;
 }
 
 label{
     display: block;
     color:#ffffff;
     padding: 1rem 0 0.25rem;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 input, textarea{
     display: block;
@@ -137,7 +142,7 @@ output{
     border-radius: 7px;
     background-color: #FFCC6E;
     color:black;
-    padding: .5rem;
+    padding:.7em 2em;
     margin: 3rem 0;
     cursor:pointer;
 }

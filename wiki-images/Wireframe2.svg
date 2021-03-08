@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="812" viewBox="0 0 375 812">
+  <defs>
+    <clipPath id="clip-Wireframe_filter_2">
+      <rect width="375" height="812"/>
+    </clipPath>
+  </defs>
+  <g id="Wireframe_filter_2" data-name="Wireframe filter – 2" clip-path="url(#clip-Wireframe_filter_2)">
+    <rect width="375" height="812" fill="#2f323d"/>
+    <text id="Filter" transform="translate(16 25)" fill="#fff" font-size="25" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="24">Filter</tspan></text>
+    <text id="Studie" transform="translate(16 86)" fill="#fff" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="19">Studie</tspan></text>
+    <text id="Leeftijd" transform="translate(19 298)" fill="#fff" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="19">Leeftijd</tspan></text>
+    <text id="Skills" transform="translate(16 194)" fill="#fff" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="19">Skills</tspan></text>
+    <text id="Jaarlaag" transform="translate(16 419)" fill="#fff" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="19">Jaarlaag</tspan></text>
+    <text id="Online_Offline" data-name="Online/Offline" transform="translate(16 523)" fill="#fff" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="19">Online/Offline</tspan></text>
+    <text id="Online" transform="translate(42 555)" fill="#fff" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="15">Online</tspan></text>
+    <text id="Huiswerk" transform="translate(42 656)" fill="#fff" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="15">Huiswerk</tspan></text>
+    <text id="Tentamen" transform="translate(176 656)" fill="#fff" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="15">Tentamen</tspan></text>
+    <text id="Studiesessie" transform="translate(42 695)" fill="#fff" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="15">Studiesessie</tspan></text>
+    <text id="Offline" transform="translate(176 555)" fill="#fff" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="15">Offline</tspan></text>
+    <text id="Soort_sessie" data-name="Soort sessie" transform="translate(16 624)" fill="#fff" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="19">Soort sessie</tspan></text>
+    <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(16 122)" fill="#505568" stroke="#fff" stroke-width="1">
+      <rect width="234" height="27" stroke="none"/>
+      <rect x="0.5" y="0.5" width="233" height="26" fill="none"/>
+    </g>
+    <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(16 226)" fill="#505568" stroke="#fff" stroke-width="1">
+      <rect width="234" height="27" stroke="none"/>
+      <rect x="0.5" y="0.5" width="233" height="26" fill="none"/>
+    </g>
+    <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(16 451)" fill="#505568" stroke="#fff" stroke-width="1">
+      <rect width="234" height="27" stroke="none"/>
+      <rect x="0.5" y="0.5" width="233" height="26" fill="none"/>
+    </g>
+    <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(19 345)" fill="#505568" stroke="#fff" stroke-width="1">
+      <rect width="257" height="23" rx="11.5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="256" height="22" rx="11" fill="none"/>
+    </g>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(16 342)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="14.5" cy="14.5" r="14.5" stroke="none"/>
+      <circle cx="14.5" cy="14.5" r="14" fill="none"/>
+    </g>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="8.5" cy="8.5" r="8.5" transform="translate(16 555)" fill="#fff"/>
+    <circle id="Ellipse_9" data-name="Ellipse 9" cx="5.5" cy="5.5" r="5.5" transform="translate(19 558)" fill="#ffcc6e"/>
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="8.5" cy="8.5" r="8.5" transform="translate(16 656)" fill="#fff"/>
+    <circle id="Ellipse_5" data-name="Ellipse 5" cx="8.5" cy="8.5" r="8.5" transform="translate(150 656)" fill="#fff"/>
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="8.5" cy="8.5" r="8.5" transform="translate(16 695)" fill="#fff"/>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="8.5" cy="8.5" r="8.5" transform="translate(150 555)" fill="#fff"/>
+    <path id="Polygon_1" data-name="Polygon 1" d="M8,0l8,14H0Z" transform="translate(245 143) rotate(180)" fill="#fff"/>
+    <path id="Polygon_2" data-name="Polygon 2" d="M8,0l8,14H0Z" transform="translate(245 247) rotate(180)" fill="#fff"/>
+    <path id="Polygon_3" data-name="Polygon 3" d="M8,0l8,14H0Z" transform="translate(245 472) rotate(180)" fill="#fff"/>
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="139" height="40" rx="10" transform="translate(118 745)" fill="#ffcc6e"/>
+    <text id="Opslaan" transform="translate(140 756)" font-size="14" font-family="Montserrat-Regular, Montserrat"><tspan x="-28.924" y="14">Opslaan</tspan></text>
+  </g>
+</svg>

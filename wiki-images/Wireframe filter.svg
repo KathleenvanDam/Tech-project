@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="812" viewBox="0 0 375 812">
+  <defs>
+    <clipPath id="clip-Wireframe_filter">
+      <rect width="375" height="812"/>
+    </clipPath>
+  </defs>
+  <g id="Wireframe_filter" data-name="Wireframe filter" clip-path="url(#clip-Wireframe_filter)">
+    <rect width="375" height="812" fill="#fff"/>
+    <text id="Filter" transform="translate(16 25)" fill="#707070" font-size="23" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="22">Filter</tspan></text>
+    <text id="Studie" transform="translate(16 86)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="19">Studie</tspan></text>
+    <text id="Leeftijd" transform="translate(16 302)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="19">Leeftijd</tspan></text>
+    <text id="Skills" transform="translate(16 194)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="19">Skills</tspan></text>
+    <text id="Jaarlaag" transform="translate(16 410)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="19">Jaarlaag</tspan></text>
+    <text id="Online_Offline" data-name="Online/Offline" transform="translate(16 518)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="19">Online/Offline</tspan></text>
+    <text id="Online" transform="translate(42 550)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="15">Online</tspan></text>
+    <text id="Huiswerk" transform="translate(42 658)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="15">Huiswerk</tspan></text>
+    <text id="Tentamen" transform="translate(176 658)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="15">Tentamen</tspan></text>
+    <text id="Studiesessie" transform="translate(42 697)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="15">Studiesessie</tspan></text>
+    <text id="Offline" transform="translate(176 550)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="15">Offline</tspan></text>
+    <text id="Soort_sessie" data-name="Soort sessie" transform="translate(16 626)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="19">Soort sessie</tspan></text>
+    <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(16 122)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="234" height="27" stroke="none"/>
+      <rect x="0.5" y="0.5" width="233" height="26" fill="none"/>
+    </g>
+    <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(16 226)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="234" height="27" stroke="none"/>
+      <rect x="0.5" y="0.5" width="233" height="26" fill="none"/>
+    </g>
+    <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(16 442)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="234" height="27" stroke="none"/>
+      <rect x="0.5" y="0.5" width="233" height="26" fill="none"/>
+    </g>
+    <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(16 349)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="257" height="23" rx="11.5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="256" height="22" rx="11" fill="none"/>
+    </g>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(13 346)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="14.5" cy="14.5" r="14.5" stroke="none"/>
+      <circle cx="14.5" cy="14.5" r="14" fill="none"/>
+    </g>
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(16 550)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
+      <circle cx="8.5" cy="8.5" r="8" fill="none"/>
+    </g>
+    <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(16 658)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
+      <circle cx="8.5" cy="8.5" r="8" fill="none"/>
+    </g>
+    <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(150 658)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
+      <circle cx="8.5" cy="8.5" r="8" fill="none"/>
+    </g>
+    <g id="Ellipse_6" data-name="Ellipse 6" transform="translate(16 697)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
+      <circle cx="8.5" cy="8.5" r="8" fill="none"/>
+    </g>
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(150 550)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
+      <circle cx="8.5" cy="8.5" r="8" fill="none"/>
+    </g>
+    <g id="Polygon_1" data-name="Polygon 1" transform="translate(245 143) rotate(180)" fill="#707070">
+      <path d="M 15.1384105682373 13.5 L 0.8615881204605103 13.5 L 7.999999523162842 1.007779955863953 L 15.1384105682373 13.5 Z" stroke="none"/>
+      <path d="M 7.999999523162842 2.015560150146484 L 1.723176956176758 13 L 14.27682209014893 13 L 7.999999523162842 2.015560150146484 M 7.999999523162842 0 L 16 14 L -9.5367431640625e-07 14 L 7.999999523162842 0 Z" stroke="none" fill="#707070"/>
+    </g>
+    <g id="Polygon_2" data-name="Polygon 2" transform="translate(245 247) rotate(180)" fill="#707070">
+      <path d="M 15.1384105682373 13.5 L 0.8615881204605103 13.5 L 7.999999523162842 1.007779955863953 L 15.1384105682373 13.5 Z" stroke="none"/>
+      <path d="M 7.999999523162842 2.015560150146484 L 1.723176956176758 13 L 14.27682209014893 13 L 7.999999523162842 2.015560150146484 M 7.999999523162842 0 L 16 14 L -9.5367431640625e-07 14 L 7.999999523162842 0 Z" stroke="none" fill="#707070"/>
+    </g>
+    <g id="Polygon_3" data-name="Polygon 3" transform="translate(245 463) rotate(180)" fill="#707070">
+      <path d="M 15.1384105682373 13.5 L 0.8615881204605103 13.5 L 7.999999523162842 1.007779955863953 L 15.1384105682373 13.5 Z" stroke="none"/>
+      <path d="M 7.999999523162842 2.015560150146484 L 1.723176956176758 13 L 14.27682209014893 13 L 7.999999523162842 2.015560150146484 M 7.999999523162842 0 L 16 14 L -9.5367431640625e-07 14 L 7.999999523162842 0 Z" stroke="none" fill="#707070"/>
+    </g>
+  </g>
+</svg>
