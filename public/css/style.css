@@ -20,15 +20,27 @@ h2{
     margin:1.5em 0 .2em .6em;
 }
 
-.filterBtn, .resetBtn{
+.filterBtn{
     text-decoration: none;
     color:#FFCC6E;
-    margin-left:1.2em;
     border: 1px solid #FFCC6E;
     background-color: #2F323D;
     border-radius: 5px;
     padding:.5em 2em;
-    margin-left:10.5em;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.resetBtn{
+    text-decoration: none;
+    color:#ff9c0f;
+    margin-left:.8em;
+    border: 1px solid #2F323D;
+    background-color: #2F323D;
+    border-radius: 5px;
+    padding:.5em 2em;
+    display: inline-block;
+    font-weight: bold;
 }
 
 .results{
