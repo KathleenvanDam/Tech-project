@@ -1,7 +1,7 @@
 body{
     margin:0;
     padding:0;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color:#2F323D;
 }
 
@@ -18,6 +18,12 @@ body{
 h2{
     color:#ffffff;
     margin:1.5em 0 .2em .6em;
+}
+
+.results{
+    margin:1em;
+    font-weight: bold;
+    display:inline-block;
 }
 
 .filterBtn{
@@ -38,16 +44,12 @@ h2{
     border: 1px solid #2F323D;
     background-color: #2F323D;
     border-radius: 5px;
-    padding:.5em 2em;
+    padding:.5em 1.8em;
     display: inline-block;
     font-weight: bold;
 }
 
-.results{
-    margin:1em;
-    font-weight: bold;
-    display:inline-block;
-}
+/*-- Styling per student --*/
 
 ul {
     margin:0;
@@ -97,8 +99,8 @@ p{
     border-radius: 10px;
 }
 
-/*-- Filter -- */
-
+/*-- Formulier slider -- */
+/*-- Bron = Tristan --*/
 .filterForm{
     position: absolute;
     background-color:#2F323D ; 
@@ -115,9 +117,18 @@ p{
     transform:translateY(0%);
 }
 
+/*-- Formulier opmaak ---*/
+
 form{
     padding:1em;
     max-width:200px;
+}
+
+label{
+    display: block;
+    color:#ffffff;
+    padding: 1rem 0 0.5rem;
+    font-size: 1.3em;
 }
 
 select{
@@ -128,12 +139,6 @@ select{
     background-color: #505568;
 }
 
-label{
-    display: block;
-    color:#ffffff;
-    padding: 1rem 0 0.25rem;
-    font-size: 1.3em;
-}
 input, textarea{
     display: block;
 }
@@ -147,6 +152,7 @@ output{
     display:inline-block;
     font-size: 1.3em;
     font-weight: bold;
+    margin:1em;
 }
 
 #sendBtn{
