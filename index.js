@@ -7,8 +7,6 @@ const {
 } = require("mongodb");
 const port = 3000;
 
-console.log('students');
-
 let db = null;
 // function connectDB
 async function connectDB() {
@@ -45,17 +43,17 @@ app.get("/", async (req, res) => {
     title: "Studentlist",
     results: students.length,
     students: students
-  })
-})
+  });
+});
 
 app.post("/", async (req, res) => {
-  let students = {};
+  let students = {}
   students = await db.collection("students").find({}).toArray();
   if (req.body.studie != 'all') {
-    students = students.filter(student => {return student.studie === req.body.studie })
+    students = students.filter(student => {return student.studie === req.body.studie})
   }
   if (req.body.age != 'all') {
-    students = students.filter(student => {return student.age <= req.body.age})
+    students = students.filter(student => {return student.age >= req.body.age})
   }
   if (req.body.year != 'all') {
     students = students.filter(student => {return student.year === req.body.year})

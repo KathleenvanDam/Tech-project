@@ -21,7 +21,7 @@
             <img src="<%= students.image %>">
             <div class="short-info">
                 <p><%= students.age %></p>
-                <p> Jaar <%= students.year %></p>
+                <p><%= students.year %></p>
                 <p><%= students.preference %></p>
             </div>
         </li>
@@ -33,7 +33,7 @@
         <form method="POST" action="/">
             <label for="studie">Studie</label>
             <select id="studie" name="studie">
-                <option>All</option>
+                <option>all</option>
                 <option>CMD</option>
                 <option>Docent</option>
                 <option>Verpleegkunde</option>
@@ -48,16 +48,16 @@
                 <option>iets</option>
             </select> -->
             <label for="age">Leeftijd</label>
-            <input id="age" type="range" name="age" value="30" min="16" max="30"
+            <input id="age" type="range" name="age" value="16" min="16" max="30"
                 oninput="this.nextElementSibling.value = this.value">
-            <output>0</output>
+            <output>16</output>
             <label for="year">Jaarlaag</label>
             <select id="year" name="year">
-                <option>All</option>
-                <option value=1>Jaar 1</option>
-                <option value=2>Jaar 2</option>
-                <option value=3>Jaar 3</option>
-                <option value=4>Jaar 4</option>
+                <option>all</option>
+                <option>Jaar 1</option>
+                <option>Jaar 2</option>
+                <option>Jaar 3</option>
+                <option>Jaar 4</option>
             </select>
             <input type="submit" id="sendBtn">
         </form>
