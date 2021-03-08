@@ -9,7 +9,7 @@
     <h1 class="visually-hidden">Welcome to Study Buddy</h1>
     <h2>Discover</h2>
     <p class="results"> <%= results %> Resultaten</p>
-    <button class="resetBtn" onclick= "window.location.href=window.location.href">Reset filter</button>
+    <button class="resetBtn" onclick="window.location.href=window.location.href">Reset filter</button>
     <button class="filterBtn">Filter</button>
     <!-- Bron: https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click -->
 
@@ -33,6 +33,7 @@
         <form method="POST" action="/">
             <label for="studie">Studie</label>
             <select id="studie" name="studie">
+                <option>All</option>
                 <option>CMD</option>
                 <option>Docent</option>
                 <option>Verpleegkunde</option>
@@ -47,11 +48,12 @@
                 <option>iets</option>
             </select> -->
             <label for="age">Leeftijd</label>
-            <input id="age" type="range" name="age" value="0" min="16" max="30"
-            oninput="this.nextElementSibling.value = this.value">
+            <input id="age" type="range" name="age" value="30" min="16" max="30"
+                oninput="this.nextElementSibling.value = this.value">
             <output>0</output>
             <label for="year">Jaarlaag</label>
             <select id="year" name="year">
+                <option>All</option>
                 <option value=1>Jaar 1</option>
                 <option value=2>Jaar 2</option>
                 <option value=3>Jaar 3</option>

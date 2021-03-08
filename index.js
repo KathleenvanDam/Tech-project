@@ -2,10 +2,12 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv").config();
-const { MongoClient } = require('mongodb');
+const {
+  MongoClient
+} = require("mongodb");
 const port = 3000;
 
-const year = ["year 1", "year 2", "year 3", "year 4"];
+console.log('students');
 
 let db = null;
 // function connectDB
@@ -13,15 +15,17 @@ async function connectDB() {
   //get URI form env file
   const uri = process.env.DB_URI
   //make connection to DB
-  const options = { useUnifiedTopology: true };
+  const options = {
+    useUnifiedTopology: true
+  };
   const client = new MongoClient(uri, options)
   await client.connect();
   db = await client.db(process.env.DB_NAME)
 }
-connectDB(); 
+connectDB();
 try {
-  console.log('We have made a connection to Mongo!')
-  
+  console.log("We have made a connection to Mongo!")
+
 } catch (error) {
   console.log(error)
 }
@@ -36,26 +40,31 @@ app.set("view engine", "ejs");
 
 app.get("/", async (req, res) => {
   let students = {}
-  students = await db.collection('students').find({ }).toArray();
-  res.render('home', 
-  {title: "Studentlist", 
-  results: students.length, 
-  students:students})
+  students = await db.collection("students").find({}).toArray();
+  res.render("home", {
+    title: "Studentlist",
+    results: students.length,
+    students: students
+  })
 })
 
 app.post("/", async (req, res) => {
   let students = {};
-  students = await db.collection('students').find({}).toArray();
-  const filteredStudents = students.filter(function (students) {
-    return students.age >= Number(req.body.age)
-    && students.studie == String(req.body.studie)
-    && students.year >= Number(req.body.year)
-  })
-
-  res.render('home', {
+  students = await db.collection("students").find({}).toArray();
+  if (req.body.studie != 'all') {
+    students = students.filter(student => {return student.studie === req.body.studie })
+  }
+  if (req.body.age != 'all') {
+    students = students.filter(student => {return student.age <= req.body.age})
+  }
+  if (req.body.year != 'all') {
+    students = students.filter(student => {return student.year === req.body.year})
+  }
+  
+  res.render("home", {
     title: "Studenten",
-    results: filteredStudents.length,
-    students:filteredStudents
+    results: students.length,
+    students: students
   })
 })
 
@@ -67,4 +76,4 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`)
 });
 
-//FIXME: ESLint dingen laten fixen
+//TODO: ESLINT runnen (npx eslint index.js)
