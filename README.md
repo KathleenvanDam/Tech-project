@@ -22,5 +22,9 @@ At last, start the server typing the following in the terminal:
 
 Don't forget to check the .env_sample to see what keys you need for the database to work. 
 
+## Visuals 
+![alt text](https://github.com/KathleenvanDam/Tech-project/blob/main/wiki-images/listnow.svg)
+![alt text](https://github.com/KathleenvanDam/Tech-project/blob/main/wiki-images/filternow.svg)
+
 ## License
 This repo uses the [MIT License](https://github.com/KathleenvanDam/Tech-project/blob/main/LICENSE)
