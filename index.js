@@ -7,6 +7,7 @@ const {
 } = require("mongodb");
 var PORT = process.env.PORT || 3000;
 
+// Connecting DB
 let db = null;
 // function connectDB
 async function connectDB() {
@@ -36,6 +37,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.set("view engine", "ejs");
 
+// Home route
 app.get("/", async (req, res) => {
   let students = {}
   students = await db.collection("students").find({}).toArray();
@@ -46,6 +48,7 @@ app.get("/", async (req, res) => {
   });
 });
 
+// Filter route
 app.post("/", async (req, res) => {
   let students = {}
   students = await db.collection("students").find({}).toArray();
@@ -66,10 +69,12 @@ app.post("/", async (req, res) => {
   })
 })
 
+// Error Route
 app.use(function (req, res) {
   res.status(404).send("Sorry can't find that page!")
 })
 
+// Securing PORT
 app.listen(PORT, () => {
   console.log(`Example app listening on Port ${PORT}!`)
 });
