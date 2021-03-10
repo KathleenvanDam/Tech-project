@@ -5,7 +5,7 @@ const dotenv = require("dotenv").config();
 const {
   MongoClient
 } = require("mongodb");
-const port = 3000;
+var PORT = process.env.PORT || 3000;
 
 let db = null;
 // function connectDB
@@ -70,8 +70,8 @@ app.use(function (req, res) {
   res.status(404).send("Sorry can't find that page!")
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`)
+app.listen(PORT, () => {
+  console.log(`Example app listening on Port ${PORT}!`)
 });
 
 //TODO: ESLINT runnen (npx eslint index.js)
