@@ -1,31 +1,97 @@
 [{
     "name": "Thomas",
     "studie": "CMD",
-    "age": 18
+    "age": 18,
+    "year":"Jaar 1",
+    "preference":"online",
+    "image":"images/guy3.svg"
   },
   {
     "name": "Nina",
-    "studie": "Economie",
-    "age": 17
+    "studie": "Verpleegkunde",
+    "age": 17,
+    "year":"Jaar 1",
+    "preference":"offline",
+    "image":"images/girl2.svg"
+  },
+  {
+    "name": "Justin",
+    "studie": "Business Studies",
+    "age": 20,
+    "year":"Jaar 2",
+    "preference":"online",
+    "image":"images/guy2.svg"
+  },
+  {
+    "name": "Roy",
+    "studie": "Communicatie",
+    "age": 21,
+    "year":"Jaar 4",
+    "preference":"online",
+    "image":"images/guy.svg"
+  },
+  {
+    "name": "Lola",
+    "studie": "Bouwkunde",
+    "age": 17,
+    "year":"Jaar 1",
+    "preference":"offline",
+    "image":"images/blonde girl.svg"
   },
   {
     "name": "Marijke",
-    "studie": "Geschiedenis",
-    "age": 20
+    "studie": "Docent",
+    "age": 23,
+    "year":"Jaar 4",
+    "preference":"offline",
+    "image":"images/girl.svg"
   },
   {
-    "name": "Thomas",
-    "studie": "Communucitie",
-    "age": 21
+    "name": "Jens",
+    "studie": "Business Studies",
+    "age": 18,
+    "year":"Jaar 2",
+    "preference":"offline",
+    "image":"images/guy4.svg"
   },
   {
-    "name": "Nina",
-    "studie": "Economie",
-    "age": 17
+    "name": "Emma",
+    "studie": "Verpleegkunde",
+    "age": 20,
+    "year":"Jaar 3",
+    "preference":"online",
+    "image":"images/girl3.svg"
   },
   {
-    "name": "Marijke",
-    "studie": "Geschiedenis",
-    "age": 23
+    "name": "Mees",
+    "studie": "Bouwkunde",
+    "age": 23,
+    "year":"Jaar 4",
+    "preference":"online",
+    "image":"images/guy5.svg"
+  },
+  {
+    "name": "Isa",
+    "studie": "CMD",
+    "age": 17,
+    "year":"Jaar 1",
+    "preference":"offline",
+    "image":"images/girl4.svg"
+  },
+  {
+    "name": "Aaron",
+    "studie": "Docent",
+    "age": 21,
+    "year":"Jaar 2",
+    "preference":"offline",
+    "image":"images/guy6.svg"
+  },
+  {
+    "name": "Lotte",
+    "studie": "Communicatie",
+    "age": 18,
+    "year":"Jaar 2",
+    "preference":"online",
+    "image":"images/girl5.svg"
   }
 ]
