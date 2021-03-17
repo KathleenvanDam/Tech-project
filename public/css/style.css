@@ -24,6 +24,11 @@ body{
 }
 
 .like .active{
+    position:absolute;
+    right:10px;
+    width:35px;
+    height:35px;
+    cursor: pointer;
     background-image: url(filled.png);
 }
 

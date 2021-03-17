@@ -7,8 +7,8 @@ function slide(){
 }
 
 const likeButton = document.querySelector(".like");
-likeButton.addEventListener("click", like);
+likeButton.addEventListener("click", liked);
 
-function like(){
+function liked(){
      likeButton.classList.toggle('active');
 }
