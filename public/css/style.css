@@ -20,6 +20,11 @@ body{
     right:10px;
     width:35px;
     height:35px;
+    cursor: pointer;
+}
+
+.like .active{
+    background-image: url(filled.png);
 }
 
 h2{
