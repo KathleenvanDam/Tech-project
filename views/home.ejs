@@ -16,6 +16,11 @@
     <ul>
         <% students.forEach(function(students) { %>
         <li class="student">
+            <button class="like">
+                <svg xmlns="http://www.w3.org/2000/svg" width="55" height="56" viewBox="0 0 55 56">
+                    <text id="_" data-name="􀒂" fill="#ff6767" font-size="40" font-family="SFCompactDisplay-Regular, SF Compact Display"><tspan x="0" y="38">􀒂</tspan></text>
+                  </svg>
+            </button>
             <h1><%= students.name %></h1>
             <p><%= students.studie %></p>
             <img src="<%= students.image %>">
