@@ -6,20 +6,5 @@
 <body>
     <% title %>
     
-    <ul>
-        <% students.forEach(function(students) { %>
-        <li class="student">
-            <h1><%= students.name %></h1>
-            <p><%= students.studie %></p>
-            <img src="<%= students.image %>">
-            <div class="short-info">
-                <p><%= students.age %></p>
-                <p><%= students.year %></p>
-                <p><%= students.preference %></p>
-            </div>
-        </li>
-    </ul>
-    <% }); %>
-    
 </body>
 </html>
