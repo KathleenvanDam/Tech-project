@@ -67,10 +67,13 @@ app.post("/", async (req, res) => {
     results: students.length,
     students: students
   })
-})
+});
 
 // Like Route
-
+app.get('/like', (req, res) => {
+  console.log('test');
+  res.render('like', {title:'list of liked persons'})
+});
 
 // Error Route
 app.use(function (req, res) {
