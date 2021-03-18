@@ -44,7 +44,7 @@ app.get("/", async (req, res) => {
   res.render("home", {
     title: "Studentlist",
     results: students.length,
-    students: students
+    students
   });
 });
 
