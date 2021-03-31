@@ -4,7 +4,8 @@
     "age": 18,
     "year":"Jaar 1",
     "preference":"online",
-    "image":"images/guy3.svg"
+    "image":"images/guy3.svg",
+    "like":true
   },
   {
     "name": "Nina",
@@ -12,7 +13,8 @@
     "age": 17,
     "year":"Jaar 1",
     "preference":"offline",
-    "image":"images/girl2.svg"
+    "image":"images/girl2.svg",
+    "like":true
   },
   {
     "name": "Justin",
@@ -20,7 +22,8 @@
     "age": 20,
     "year":"Jaar 2",
     "preference":"online",
-    "image":"images/guy2.svg"
+    "image":"images/guy2.svg",
+    "like":true
   },
   {
     "name": "Roy",
@@ -28,7 +31,8 @@
     "age": 21,
     "year":"Jaar 4",
     "preference":"online",
-    "image":"images/guy.svg"
+    "image":"images/guy.svg",
+    "like":true
   },
   {
     "name": "Lola",
@@ -36,7 +40,8 @@
     "age": 17,
     "year":"Jaar 1",
     "preference":"offline",
-    "image":"images/blonde girl.svg"
+    "image":"images/blonde girl.svg",
+    "like":false
   },
   {
     "name": "Marijke",
@@ -44,7 +49,8 @@
     "age": 23,
     "year":"Jaar 4",
     "preference":"offline",
-    "image":"images/girl.svg"
+    "image":"images/girl.svg",
+    "like":false
   },
   {
     "name": "Jens",
@@ -52,7 +58,8 @@
     "age": 18,
     "year":"Jaar 2",
     "preference":"offline",
-    "image":"images/guy4.svg"
+    "image":"images/guy4.svg",
+    "like":false
   },
   {
     "name": "Emma",
@@ -60,7 +67,8 @@
     "age": 20,
     "year":"Jaar 3",
     "preference":"online",
-    "image":"images/girl3.svg"
+    "image":"images/girl3.svg",
+    "like":false
   },
   {
     "name": "Mees",
@@ -68,7 +76,8 @@
     "age": 23,
     "year":"Jaar 4",
     "preference":"online",
-    "image":"images/guy5.svg"
+    "image":"images/guy5.svg",
+    "like":false
   },
   {
     "name": "Isa",
@@ -76,7 +85,8 @@
     "age": 17,
     "year":"Jaar 1",
     "preference":"offline",
-    "image":"images/girl4.svg"
+    "image":"images/girl4.svg",
+    "like":false
   },
   {
     "name": "Aaron",
@@ -84,7 +94,8 @@
     "age": 21,
     "year":"Jaar 2",
     "preference":"offline",
-    "image":"images/guy6.svg"
+    "image":"images/guy6.svg",
+    "like":false
   },
   {
     "name": "Lotte",
@@ -92,6 +103,7 @@
     "age": 18,
     "year":"Jaar 2",
     "preference":"online",
-    "image":"images/girl5.svg"
+    "image":"images/girl5.svg",
+    "like":false
   }
 ]

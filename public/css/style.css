@@ -185,7 +185,7 @@ output{
 footer{
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: #ffffff;
     position:fixed;
     left:0;
     bottom:0;

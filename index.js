@@ -49,8 +49,13 @@ app.get("/", async (req, res) => {
 });
 
 // Like Route
-app.get('/like', (req, res) => {
-  res.render('like', {title:'list of liked persons'})
+app.get('/like', async (req, res) => {
+  let students = {};
+  students = await db.collection('liked').find({like:true}).toArray();
+  res.render("like", {
+    title:'list of liked persons',
+    results: students.length,
+    students});
 });
 
 // Filter route
@@ -68,18 +73,10 @@ app.post("/", async (req, res) => {
   }
   
   res.render("home", {
-    title: "Studenten",
     results: students.length,
     students: students
   })
 });
-
-// let user = {}
-  // user = await db.collection('profile').find({}).toArray();
-  // if (req.body.like === true){
-  //   user = await db.collection('profile').update({"like":true}, {$set:{"like":false}});
-  //   console.log("whoop");
-  // }
 
 // Error Route
 app.use(function (req, res) {
