@@ -74,6 +74,12 @@ app.post("/", async (req, res) => {
   })
 });
 
+// let user = {}
+  // user = await db.collection('profile').find({}).toArray();
+  // if (req.body.like === true){
+  //   user = await db.collection('profile').update({"like":true}, {$set:{"like":false}});
+  //   console.log("whoop");
+  // }
 
 // Error Route
 app.use(function (req, res) {

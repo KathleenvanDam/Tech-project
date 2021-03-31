@@ -182,3 +182,18 @@ output{
     cursor:pointer;
 }
 
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+}
+
+footer a{
+    text-decoration: none;
+    color: #ff9c0f;
+    padding:1em;
+}
