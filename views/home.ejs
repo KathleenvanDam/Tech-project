@@ -2,7 +2,16 @@
 <html lang="en">
 
 <head>
-    <%- include ('layout/head'); -%>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title> <%= title %> </title>
+    <!-- <%- include ('layout/head'); -%> -->
 </head>
 
 <body>
@@ -16,11 +25,6 @@
     <ul>
         <% students.forEach(function(students) { %>
         <li class="student">
-            <!-- <button class="like-btn" type="submit" name="id" value="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="55" height="56" viewBox="0 0 55 56">
-                    <text id="_" data-name="􀒂" fill="#ff6767" font-size="40" font-family="SFCompactDisplay-Regular, SF Compact Display"><tspan x="0" y="38">􀒂</tspan></text>
-                  </svg>
-            </button> -->
             <h1><%= students.name %></h1>
             <p><%= students.studie %></p>
             <label class="container">
@@ -49,12 +53,6 @@
                 <option>Communicatie</option>
                 <option>Business Studies</option>
             </select>
-            <!--<label for="skills">Skills</label>
-            <select id="skills" name="skills">
-                <option>Front-end</option>
-                <option>Photoshop</option>
-                <option>iets</option>
-            </select> -->
             <label for="age">Leeftijd</label>
             <input id="age" type="range" name="age" value="16" min="16" max="30"
                 oninput="this.nextElementSibling.value = this.value">

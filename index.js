@@ -40,7 +40,7 @@ app.set("view engine", "ejs");
 // Home route
 app.get("/", async (req, res) => {
   let students = {}
-  students = await db.collection("students").find({}).toArray();
+  students = await db.collection("students").find({like:false}).toArray();
   res.render("home", {
     title: "Studentlist",
     results: students.length,
@@ -55,7 +55,7 @@ app.get('/like', async (req, res) => {
   res.render("like", {
     title:'list of liked persons',
     results: students.length,
-    students});
+    students: students});
 });
 
 // Filter route
@@ -73,6 +73,7 @@ app.post("/", async (req, res) => {
   }
   
   res.render("home", {
+    title:"Studentlist",
     results: students.length,
     students: students
   })
