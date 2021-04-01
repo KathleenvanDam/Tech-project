@@ -6,9 +6,10 @@ function slide(){
     filter.classList.add("filterForm-show");
 }
 
-const likeButton = document.querySelector(".like");
+const likeButton = document.querySelector(".like-btn");
 likeButton.addEventListener("click", liked);
 
 function liked(){
-     likeButton.classList.toggle('active');
+     likeButton.classList.toggle('true');
 }
+
