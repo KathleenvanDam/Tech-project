@@ -51,9 +51,9 @@ app.get("/", async (req, res) => {
 // Like Route
 app.get('/like', async (req, res) => {
   let students = {};
-  students = await db.collection('liked').find({like:true}).toArray();
+  students = await db.collection("students").find({like:true}).toArray();
   res.render("like", {
-    title:'list of liked persons',
+    title:"Liked",
     results: students.length,
     students: students});
 });

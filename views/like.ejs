@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include ('layout/head'); -%>
 </head>
-<body>
-    <%- title %>
 
-    <p> <%= results %> people liked you</p>
+<body>
+    <h2><%- title %> </h2>
+
+    <p class="results"> <%= results %> people liked you</p>
 
     <ul>
         <% students.forEach(function(students) { %>
         <li class="student">
             <h1><%= students.name %></h1>
             <p><%= students.studie %></p>
+            <label class="container">
+                <input name="likes" type="checkbox" class="like-btn">
+            </label>
             <img src="<%= students.image %>">
             <div class="short-info">
                 <p><%= students.age %></p>
@@ -24,5 +29,7 @@
     <% }); %>
 
     <%- include ('layout/nav'); -%>
+    <script src="/script.js"></script>
 </body>
+
 </html>

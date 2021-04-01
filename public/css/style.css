@@ -217,7 +217,7 @@ output{
 footer{
     display: flex;
     justify-content: space-between;
-    background-color: #2F323D;
+    background-color: #FFFFFF;
     position:fixed;
     left:0;
     bottom:0;
@@ -226,6 +226,12 @@ footer{
 
 footer a{
     text-decoration: none;
-    color: #ff9c0f;
     padding:1em;
+}
+
+.far, .fas{
+    font-family: "Font Awesome 5 Free";
+    font-size: 30px;
+    font-weight:900;
+    color:#ff9c0f;
 }
