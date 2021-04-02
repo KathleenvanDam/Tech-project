@@ -19,7 +19,6 @@ body{
 .container{
     position:absolute;
     right:5%;
-    bottom:26%;
 }
 
 li form{
@@ -34,17 +33,17 @@ li form{
 }
 
 /* Stylen van de checkbox: https://www.youtube.com/watch?v=y93M3RoKQUE */
-input[type="checkbox"] {
+/* input[type="checkbox"] {
     appearance: none;
     border-radius:5px;
     background: #d3d3d3;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* Toevoegen van icon: https://stackoverflow.com/questions/10393462/placing-unicode-character-in-css-content-value */
-input[type="checkbox"]:after{
+/* input[type="checkbox"]:after{
     font-family: "Font Awesome 5 Free";
     font-weight:900;
     content: "\f004";
@@ -68,7 +67,7 @@ input[type="checkbox"]:checked:after{
     height:25px;
     cursor: pointer;
     background-image: url(filled.png);
-}
+} */
 
 /* Bovenste gedeelte pagina  */
 h2{

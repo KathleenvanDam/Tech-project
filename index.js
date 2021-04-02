@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv").config();
-const { MongoClient, ObjectID } = require("mongodb");
+const { MongoClient } = require("mongodb");
+const { ObjectID } = require("mongodb");
 var PORT = process.env.PORT || 3000;
 
 // Connecting DB
@@ -56,27 +57,23 @@ app.get('/like', async (req, res) => {
     students: students});
 });
 
-app.post('/like', async (req, res) => {
+app.post('/', async (req, res) => {
   const id = new ObjectID(req.body.id);
-  //let students;
-
-  try {
-    await db.collection("students").updateOne({'_id':id}, {$set:{'like':true}});
-    //students = await db.collection('students').find({like:false}).toArray();
-  }
-  catch (error) {
-    console.error('Error:', error);
-  }
+  let students = {};
+  
+  await db.collection("students").update({'_id': id}, {$set:{'like':true}});
+  students = await db.collection('students').find({like:false}).toArray();
 
   res.render("home", {
-    title: 'test'
-  })
+    title: 'test',
+    results: students.length,
+    students: students});
 })
 
 // Filter route
 app.post("/", async (req, res) => {
   let students = {}
-  students = await db.collection("students").find({}).toArray();
+  students = await db.collection("students").find({like:false}).toArray();
   if (req.body.studie != 'all') {
     students = students.filter(student => {return student.studie === req.body.studie})
   }
