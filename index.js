@@ -2,9 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv").config();
-const {
-  MongoClient
-} = require("mongodb");
+const { MongoClient, ObjectID } = require("mongodb");
 var PORT = process.env.PORT || 3000;
 
 // Connecting DB
@@ -57,6 +55,23 @@ app.get('/like', async (req, res) => {
     results: students.length,
     students: students});
 });
+
+app.post('/like', async (req, res) => {
+  const id = new ObjectID(req.body.id);
+  //let students;
+
+  try {
+    await db.collection("students").updateOne({'_id':id}, {$set:{'like':true}});
+    //students = await db.collection('students').find({like:false}).toArray();
+  }
+  catch (error) {
+    console.error('Error:', error);
+  }
+
+  res.render("home", {
+    title: 'test'
+  })
+})
 
 // Filter route
 app.post("/", async (req, res) => {

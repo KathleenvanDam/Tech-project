@@ -15,10 +15,16 @@ body{
   width: 1px;
 }
 
+/* Like button */
 .container{
     position:absolute;
     right:5%;
     bottom:26%;
+}
+
+li form{
+    padding:0;
+    margin:0;
 }
 
 .like-btn{
@@ -64,6 +70,7 @@ input[type="checkbox"]:checked:after{
     background-image: url(filled.png);
 }
 
+/* Bovenste gedeelte pagina  */
 h2{
     color:#ffffff;
     margin:1.5em 0 .2em .6em;
@@ -213,6 +220,8 @@ output{
     margin: 3rem 0;
     cursor:pointer;
 }
+
+/* Navigatie */
 
 footer{
     display: flex;
