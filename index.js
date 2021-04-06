@@ -61,17 +61,17 @@ app.post('/', async (req, res) => {
   const id = new ObjectID(req.body.id);
   let students = {};
   
-  await db.collection("students").update({'_id': id}, {$set:{'like':true}});
+  await db.collection('students').updateOne({'_id': id}, {$set:{'like':true}});
   students = await db.collection('students').find({like:false}).toArray();
 
   res.render("home", {
-    title: 'test',
+    title: 'students',
     results: students.length,
     students: students});
 })
 
 // Filter route
-app.post("/", async (req, res) => {
+app.post('/', async (req, res) => {
   let students = {}
   students = await db.collection("students").find({like:false}).toArray();
   if (req.body.studie != 'all') {
