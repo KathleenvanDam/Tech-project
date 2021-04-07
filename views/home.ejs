@@ -33,7 +33,7 @@
 
     <section class="filterForm">
         <h2>Filter</h2>
-        <form method="POST" action="/">
+        <form action="<%= selectedQueries ? `${selectedQueries}` : '/' %>" method="GET">
             <label for="studie">Studie</label>
             <select id="studie" name="studie">
                 <option>all</option>

@@ -43,6 +43,7 @@ app.get("/", async (req, res) => {
   res.render("home", {
     title: "Studentlist",
     results: students.length,
+    selectedQueries,
     students
   });
 });
@@ -50,9 +51,39 @@ app.get("/", async (req, res) => {
 // Like Route
 app.get('/like', async (req, res) => {
   let students = {};
+  let queryArray = [];
   students = await db.collection("students").find({like:true}).toArray();
+
+  if(Object.keys(req.query).length){
+    if (req.query.studie != 'all') {
+      students = students.filter(student => {return student.studie === req.query.studie})
+      queryArray.push(`studie=${req.query.studie}`);
+    }
+    else {
+      queryArray.push(`studie=${req.query.studie}`);
+    }
+    if (req.query.age != 'all') {
+      students = students.filter(student => {return student.age >= req.query.age})
+      queryArray.push(`age=${req.query.age}`);
+    }
+    else {
+      queryArray.push(`age=${req.query.age}`);
+    }
+    if (req.query.year != 'all') {
+      students = students.filter(student => {return student.year === req.query.year});
+      queryArray.push(`year=${req.query.year}`);
+    }
+    else {
+      queryArray.push(`year=${req.query.year}`);
+    }
+  }
+
+  const selectedQueries = queryArray.length && `?${queryArray.join('&')}`;
+
   res.render("like", {
     title:"Liked",
+    queries: req.query,
+    selectedQueries,
     results: students.length,
     students: students});
 });
@@ -72,21 +103,42 @@ app.post('/', async (req, res) => {
 })
 
 // Filter route
-app.post('/', async (req, res) => {
+// Bron = Danny Frelink 
+app.get('/', async (req, res) => {
   let students = {}
+  let queryArray = [];
   students = await db.collection("students").find({like:false}).toArray();
-  if (req.body.studie != 'all') {
-    students = students.filter(student => {return student.studie === req.body.studie})
+
+  if(Object.keys(req.query).length){
+    if (req.query.studie != 'all') {
+      students = students.filter(student => {return student.studie === req.query.studie}) // Bron filter = Sam Slotenmaker
+      queryArray.push(`studie=${req.query.studie}`);
+    }
+    else {
+      queryArray.push(`studie=${req.query.studie}`);
+    }
+    if (req.query.age != 'all') {
+      students = students.filter(student => {return student.age >= req.query.age})
+      queryArray.push(`age=${req.query.age}`);
+    }
+    else {
+      queryArray.push(`age=${req.query.age}`);
+    }
+    if (req.query.year != 'all') {
+      students = students.filter(student => {return student.year === req.query.year});
+      queryArray.push(`year=${req.query.year}`);
+    }
+    else {
+      queryArray.push(`year=${req.query.year}`);
+    }
   }
-  if (req.body.age != 'all') {
-    students = students.filter(student => {return student.age >= req.body.age})
-  }
-  if (req.body.year != 'all') {
-    students = students.filter(student => {return student.year === req.body.year})
-  }
+
+  const selectedQueries = queryArray.length && `?${queryArray.join('&')}`;
   
   res.render("home", {
     title:"Studentlist",
+    queries: req.query,
+    selectedQueries,
     results: students.length,
     students: students
   })
