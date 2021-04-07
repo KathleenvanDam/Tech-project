@@ -28,32 +28,22 @@ try {
   console.log(error)
 }
 
+// public file koppelen
 app.use(express.static("public"));
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-  extended: true
+  extended: false
 }));
+//view engine 
 app.set("view engine", "ejs");
 
 // Home route
 app.get("/", async (req, res) => {
-  let students = {}
-  students = await db.collection("students").find({like:false}).toArray();
-  res.render("home", {
-    title: "Studentlist",
-    results: students.length,
-    selectedQueries,
-    students
-  });
-});
-
-// Like Route
-app.get('/like', async (req, res) => {
   let students = {};
+  students = await db.collection("students").find({like:false}).toArray();
   let queryArray = [];
-  students = await db.collection("students").find({like:true}).toArray();
 
+  // Bron object keys: https://www.geeksforgeeks.org/object-keys-javascript/#:~:text=keys()%20Method-,Object.,is%20applied%20to%20the%20properties. Geeft alle strings terug als een opsomming (wanneer er sprake is van een opsomming).
   if(Object.keys(req.query).length){
     if (req.query.studie != 'all') {
       students = students.filter(student => {return student.studie === req.query.studie})
@@ -78,29 +68,44 @@ app.get('/like', async (req, res) => {
     }
   }
 
-  const selectedQueries = queryArray.length && `?${queryArray.join('&')}`;
+  // allQueries aanmaken om alle queries aan elkaar te zetten als er een lengte van queries is. 
+  const allQueries = queryArray.length && `?${queryArray.join('&')}`;
+
+  res.render("home", {
+    title: "Studentlist",
+    results: students.length,
+    allQueries,
+    students
+  });
+});
+
+// Like Route
+app.get('/like', async (req, res) => {
+  let students = {};
+  students = await db.collection("students").find({like:true}).toArray();
 
   res.render("like", {
     title:"Liked",
-    queries: req.query,
-    selectedQueries,
     results: students.length,
-    students: students});
+    students});
 });
 
 // Like button submit route
 app.post('/', async (req, res) => {
-  const id = new ObjectID(req.body.id);
+  const id = new ObjectID(req.body.id); // Bron: https://docs.mongodb.com/manual/reference/method/ObjectId/
   let students = {};
   
+  // zoeken naar studenten in de db en hun id updaten. Like van false naar true zetten. 
   await db.collection('students').update({'_id': id}, {$set:{'like':true}});
+  // zoeken naar studenten in de db waarvan de like op false staat. 
   students = await db.collection('students').find({like:false}).toArray();
 
   res.render('home', {
     title: 'students',
     results: students.length,
-    students: students});
-})
+    allQueries,
+    students});
+});
 
 // Filter route
 // Bron = Danny Frelink 
@@ -110,7 +115,9 @@ app.get('/', async (req, res) => {
   students = await db.collection("students").find({like:false}).toArray();
 
   if(Object.keys(req.query).length){
+    // wanneer de studie niet geselecteerd is als 'all' dan wordt de volgende regel uitgevoerd.
     if (req.query.studie != 'all') {
+      // de students array wordt gefilterd door deze te overschrijven. Binnen filter -> wanneer studie van student gelijk is aan het gekozen filter. 
       students = students.filter(student => {return student.studie === req.query.studie}) // Bron filter = Sam Slotenmaker
       queryArray.push(`studie=${req.query.studie}`);
     }
@@ -131,14 +138,13 @@ app.get('/', async (req, res) => {
     else {
       queryArray.push(`year=${req.query.year}`);
     }
-  }
+  };
 
-  const selectedQueries = queryArray.length && `?${queryArray.join('&')}`;
+  const allQueries = queryArray.length && `?${queryArray.join('&')}`;
   
   res.render("home", {
     title:"Studentlist",
-    queries: req.query,
-    selectedQueries,
+    allQueries,
     results: students.length,
     students: students
   })
@@ -147,7 +153,7 @@ app.get('/', async (req, res) => {
 // Error Route
 app.use(function (req, res) {
   res.status(404).send("Sorry can't find that page!")
-})
+});
 
 // Securing PORT
 app.listen(PORT, () => {
