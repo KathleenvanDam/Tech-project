@@ -16,58 +16,24 @@ body{
 }
 
 /* Like button */
-.container{
-    position:absolute;
-    right:5%;
-}
-
 li form{
     padding:0;
     margin:0;
 }
 
 .like-btn{
-    width:25px;
-    height:25px;
-    cursor: pointer;
-}
-
-/* Stylen van de checkbox: https://www.youtube.com/watch?v=y93M3RoKQUE */
-/* input[type="checkbox"] {
-    appearance: none;
-    border-radius:5px;
-    background: #d3d3d3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-/* Toevoegen van icon: https://stackoverflow.com/questions/10393462/placing-unicode-character-in-css-content-value */
-/* input[type="checkbox"]:after{
-    font-family: "Font Awesome 5 Free";
-    font-weight:900;
-    content: "\f004";
-    font-size:18px;
-    color:#ffffff;
-    display: none;
-}
-
-input[type="checkbox"]:checked{
-    background-color: #ff1212;
-}
-
-input[type="checkbox"]:checked:after{
-    display: block;
-}
-
-.like-btn .true{
     position:absolute;
-    right:10px;
-    width:25px;
+    right:5%;
+    bottom: 32%;
+    width:40px;
     height:25px;
     cursor: pointer;
-    background-image: url(filled.png);
-} */
+    border: 1px solid #FFCC6E;
+    border-radius: 5px;
+    color:#FFCC6E;
+    background-color: #505568;
+
+}
 
 /* Bovenste gedeelte pagina  */
 h2{
@@ -237,7 +203,16 @@ footer a{
     padding:1em;
 }
 
-.far, .fas{
+/* .far, .fas{
+    font-family: "Font Awesome 5 Free";
+    font-size: 30px;
+    font-weight:900;
+    color:#ff9c0f;
+} */
+
+.far, .fa-compass,
+.fas, .fa-heart,
+.fas, .fa-user{
     font-family: "Font Awesome 5 Free";
     font-size: 30px;
     font-weight:900;

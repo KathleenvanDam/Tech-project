@@ -57,14 +57,15 @@ app.get('/like', async (req, res) => {
     students: students});
 });
 
+// Like button submit route
 app.post('/', async (req, res) => {
   const id = new ObjectID(req.body.id);
   let students = {};
   
-  await db.collection('students').updateOne({'_id': id}, {$set:{'like':true}});
+  await db.collection('students').update({'_id': id}, {$set:{'like':true}});
   students = await db.collection('students').find({like:false}).toArray();
 
-  res.render("home", {
+  res.render('home', {
     title: 'students',
     results: students.length,
     students: students});
